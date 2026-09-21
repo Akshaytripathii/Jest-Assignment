@@ -66,8 +66,3 @@ These are real issues, but fixing them would mean changing app behaviour, which 
 - **Email matching is case-sensitive.** `test@example.com` and `Test@Example.com` are treated as different accounts and can both register.
 - **Missing required fields return 500, not 400.** There's no input validation layer, so a missing `password` falls through to `bcrypt.hash()`, throws, and gets caught as a generic server error. It works, but a proper 400 with a clear message would be friendlier.
 - **No whitespace trimming on text fields.** A name or email with leading/trailing spaces gets saved as-is.
-
-## Demo Videos
-
-- [Loom Video 1](https://www.loom.com/share/7877cdef5fa1422ab149480593aa6387)
-- [Loom Video 2](https://www.loom.com/share/7877cdef5fa1422ab149480593aa6387)
